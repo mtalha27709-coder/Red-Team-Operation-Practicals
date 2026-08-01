@@ -1,0 +1,43 @@
+==================================================
+STORED XSS PLAYBOOK
+==================================================
+
+Lab:
+DVWA
+
+Vulnerability:
+Stored Cross-Site Scripting (Stored XSS)
+
+Security Level:
+Low
+
+Payload Used:
+
+<script>alert(1)</script>
+
+Additional Payload:
+
+<script>alert(document.domain)</script>
+
+Expected Result:
+
+JavaScript payload stored successfully.
+Payload executed automatically whenever the page loaded.
+
+Impact:
+
+• Persistent JavaScript execution
+• Session hijacking
+• Cookie theft
+• Credential theft
+• Phishing attacks
+
+Mitigation:
+
+• Output Encoding
+• Input Validation
+• Content Security Policy (CSP)
+• HttpOnly Cookies
+
+Status:
+SUCCESS

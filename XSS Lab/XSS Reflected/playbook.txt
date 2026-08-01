@@ -1,0 +1,27 @@
+Lab Name:
+DVWA
+
+Vulnerability:
+Reflected Cross-Site Scripting (XSS)
+
+Payload Used:
+
+<script>alert(1)</script>
+
+Additional Payload:
+
+<script>alert(document.domain)</script>
+
+Result:
+
+JavaScript executed successfully.
+
+Impact:
+
+Attacker can execute arbitrary JavaScript in victim browser.
+
+Mitigation:
+
+• Input Validation
+• Output Encoding
+• Content Security Policy
