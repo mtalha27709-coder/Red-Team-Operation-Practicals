@@ -1,36 +1,40 @@
-# OSINT Investigation Report
+# 🔵 OSINT Investigation Report
 
-## Overview
+<p align="center">
 
-This project demonstrates a passive Open Source Intelligence (OSINT) investigation conducted against the publicly accessible domain **cybrixen.com**.
+![Platform](https://img.shields.io/badge/Investigation-Passive%20OSINT-blue?style=for-the-badge)
+![Target](https://img.shields.io/badge/Target-cybrixen.com-orange?style=for-the-badge)
+![Scope](https://img.shields.io/badge/Scope-Public%20Information-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
-The objective was to collect publicly available information, analyze the organization's online footprint, identify exposed assets, and evaluate whether any obvious security concerns were visible without interacting with or attacking the target.
-
-> **Disclaimer:** This investigation used only passive OSINT techniques and publicly available information. No exploitation, scanning, or unauthorized access was performed.
-
----
-
-# Target
-
-- Domain: cybrixen.com
-- Investigation Type: Passive OSINT
-- Scope: Publicly Available Information Only
+</p>
 
 ---
 
-# Objectives
+## 📌 Overview
 
-- Gather publicly available domain information
-- Identify DNS records
-- Review domain registration information
-- Search for exposed public assets
-- Check public reputation
+This project demonstrates a **Passive Open Source Intelligence (OSINT) Investigation** of the publicly accessible domain **cybrixen.com**.
+
+The investigation focused on collecting publicly available information, reviewing the domain's online footprint, identifying exposed assets, and assessing potential information leakage without performing active attacks.
+
+> ⚠️ **Disclaimer:** Only passive OSINT techniques and publicly available information were used. No exploitation, intrusive scanning, or unauthorized access was performed.
+
+---
+
+## 🎯 Objectives
+
+- Gather public domain information
+- Review DNS records
+- Analyze domain registration information
+- Identify publicly exposed assets
+- Perform search engine reconnaissance
+- Review domain reputation
 - Document findings
 - Provide security recommendations
 
 ---
 
-# Tools Used
+## 🛠️ Tools Used
 
 - WHOIS
 - Dig
@@ -42,55 +46,40 @@ The objective was to collect publicly available information, analyze the organiz
 
 ---
 
-# Investigation Methodology
+## 🔎 Investigation Methodology
 
-## Phase 1 � Domain Identification
+### 1️⃣ Domain & WHOIS Analysis
 
-The target domain was selected for passive information gathering.
+Reviewed:
 
----
-
-## Phase 2 � WHOIS Lookup
-
-Information collected:
-
-- Domain registration details
-- Registrar
+- Domain registration
+- Registrar information
 - Registration dates
-- Name Servers
+- Name servers
 
----
+### 2️⃣ DNS Enumeration
 
-## Phase 3 � DNS Enumeration
-
-Performed using:
-
-- dig
-- nslookup
-
-Information reviewed:
+Used `dig` and `nslookup` to review:
 
 - A Records
 - MX Records
 - NS Records
 - TXT Records
 
----
+### 3️⃣ Search Engine Reconnaissance
 
-## Phase 4 � Search Engine Investigation
+Google search operators were used to identify publicly indexed resources.
 
-Google Dorks were used to identify publicly indexed resources.
-
-Examples:
-
-- site:cybrixen.com
-- site:cybrixen.com login
-- site:cybrixen.com admin
-- filetype:pdf site:cybrixen.com
+```text
+site:cybrixen.com
+site:cybrixen.com login
+site:cybrixen.com admin
+filetype:pdf site:cybrixen.com
+```
 
 ---
 
-## Phase 5 � Email & Public Information Gathering
+## Phase 5 — Email & Public Information Gathering
 
 theHarvester was used to identify publicly available information such as:
 
@@ -100,7 +89,7 @@ theHarvester was used to identify publicly available information such as:
 
 ---
 
-## Phase 6 � Reputation Analysis
+## Phase 6 — Reputation Analysis
 
 The domain reputation was reviewed using:
 
@@ -155,12 +144,11 @@ Based on the information available during the assessment, no significant public 
 
 ```
 OSINT-Investigation/
-?
-??? README.md
-??? Investigation_Report.pdf
-??? screenshots/
-??? findings/
-??? LICENSE
+README.md
+Investigation_Report.pdf
+screenshots/
+findings/
+LICENSE
 ```
 
 ---
@@ -177,8 +165,16 @@ OSINT-Investigation/
 
 ---
 
-# Author
+# 🏁 Conclusion
 
-**Talha**
+This project demonstrated a practical passive OSINT investigation workflow using publicly available information.
+The assessment covered domain intelligence, DNS analysis, search engine reconnaissance, public information gathering, and reputation analysis.
+No significant public exposure was identified during the assessment, demonstrating the importance of continuously monitoring an organization's external digital footprint.
 
-Cyber Security Student
+
+---
+
+# 👨‍💻 Author
+# Muhammad Talha
+
+Cybersecurity | SOC Analyst | OSINT | Red Team | Blue Team | Detection Engineering
