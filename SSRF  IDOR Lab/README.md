@@ -1,27 +1,41 @@
-# IDOR (Insecure Direct Object Reference) Testing
+# 🔴 IDOR — Insecure Direct Object Reference Testing
 
+<p align="center">
 
-## Lab Environment
+![Platform](https://img.shields.io/badge/Platform-Kali%20Linux-blue?style=for-the-badge)
+![Vulnerability](https://img.shields.io/badge/Vulnerability-IDOR-red?style=for-the-badge)
+![OWASP](https://img.shields.io/badge/OWASP-A01%20Broken%20Access%20Control-orange?style=for-the-badge)
+![Severity](https://img.shields.io/badge/Severity-High-critical?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
+</p>
 
+---
 
-## Target Application:  
+## 📌 Overview
 
-OWASP Juice Shop / DVWA Lab
+This project demonstrates **IDOR (Insecure Direct Object Reference)** testing against intentionally vulnerable web applications in a controlled lab environment.
 
+The assessment focused on modifying object identifiers in HTTP requests to determine whether proper server-side authorization controls were enforced.
 
+> ⚠️ **Disclaimer:** Testing was performed only against authorized and intentionally vulnerable laboratory applications.
 
-## Testing Type:  
+---
 
-Web Application Penetration Testing
+## 🧪 Lab Environment
 
+| Component | Details |
+|---|---|
+| Attacker | Kali Linux |
+| Target | OWASP Juice Shop / DVWA |
+| Testing Type | Web Application Penetration Testing |
+| Vulnerability | IDOR |
+| OWASP Category | A01: Broken Access Control |
+| Severity | High |
 
+---
 
-
-
-## Tools Used
-
-
+## 🛠️ Tools Used
 
 - Burp Suite Community Edition
 - Browser Developer Tools
@@ -29,142 +43,92 @@ Web Application Penetration Testing
 - DVWA
 - Kali Linux
 
+---
 
+## 🎯 Objective
 
-
+- Identify requests containing object references.
+- Modify object identifiers.
+- Analyze server responses.
+- Test authorization enforcement.
+- Determine whether unauthorized resources can be accessed.
 
 ---
 
+# 🔎 Testing Methodology
 
+### 1️⃣ Identify Object Reference
 
-# Vulnerability
+A request containing an object identifier was identified.
 
-
-
-## Insecure Direct Object Reference (IDOR)
-
-
-
-
-## OWASP Category
-
-
-
-## OWASP Top 10 → A01: Broken Access Control## 
-
-
----
-
-
-
-## Objective
-
-
-
-- To test whether an authenticated user can access another user's data by modifying object identifiers in requests.
-
-
-
-
-
----
-
-
-
-## Testing Method
-
-
-
-The following steps were performed:
-
-
-
-1. Identified requests containing object references or IDs.
-2. Captured the request using Burp Suite.
-3. Modified the object identifier value.
-4. Compared the server response before and after modification.
-
-
-
----
-
-
-
-## Test Case
-
-- Original Request Parameter:
-id=1
-- Modified Parameter:
-id=2
-
-
-
-
----
-
-
-## Example Request
-
-
-
-- Before modification:
+```
+http
 GET /profile?id=1
-
-
-
-- After modification:
-
-GET /profile?id=2
+```
 
 
 ---
 
-
-## Observation
-
-
-
+## 💥 Observation
 After changing the object identifier:
+```
+id=1  →  id=2
+```
+The application returned information belonging to another user.
+This indicated that proper server-side authorization checks were not being enforced.
 
-- The application returned another user's information.
-- Authorization checks were not properly enforced.
+---
+
+## 📊 Security Impact
+
+A successful IDOR vulnerability may allow an attacker to:
+
+Access unauthorized user information
+View private account data
+Access other users' resources
+Modify unauthorized resources
+Delete resources belonging to other users
+```
+Severity: High
+```
+---
+
+## 🛡️ Recommendations
+Implement server-side authorization checks.
+Verify resource ownership for every request.
+Do not rely on hidden or predictable IDs.
+Use indirect object references where appropriate.
+Apply proper access-control policies.
+Test authorization controls during security assessments.
+
+
+---
+
+## 🧠 Skills Demonstrated
+
+IDOR Testing
+Broken Access Control
+Burp Suite
+HTTP Request Analysis
+Web Application Penetration Testing
+Authorization Testing
+OWASP Top 10
+Vulnerability Assessment
+```
+Security Reporting - High
+```
+---
+
+## 🏁 Conclusion
+
+This lab demonstrated how improper authorization checks can allow authenticated users to access resources belonging to other users by modifying object identifiers.
+The exercise strengthened practical skills in IDOR testing, access-control assessment, Burp Suite, HTTP analysis, and web application security.
 
 
 ---
 
 
+## 👨‍💻 Author
+## Muhammad Talha
 
-## Impact
-
-
-
-An attacker may be able to:
-
-- Access unauthorized user information.
-- View private data of other accounts.
-- Modify or delete resources belonging to other users.
-
-
----
-
-
-
-## Security Recommendation
-
-
-
-To prevent IDOR vulnerabilities:
-
-- Implement server-side authorization checks.
-- Do not rely only on hidden IDs.
-- Use indirect references where possible.
-- Verify that the logged-in user owns the requested resource.
-
----
-
-
-
-## Severity
-
-- High
-
+Cybersecurity | Web Security | SOC | Red Team | Blue Team | Detection Engineering
