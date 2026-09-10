@@ -1,58 +1,71 @@
+# 🔴 Windows Privilege Escalation Lab
 
-# Windows Privilege Escalation Lab
+<p align="center">
 
-## ?? Overview
+![Platform](https://img.shields.io/badge/Platform-Kali%20Linux-blue?style=for-the-badge)
+![Target](https://img.shields.io/badge/Target-Windows%207-0078D6?style=for-the-badge)
+![Technique](https://img.shields.io/badge/Technique-Privilege%20Escalation-red?style=for-the-badge)
+![VM](https://img.shields.io/badge/Environment-VMware-orange?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
-This project demonstrates the process of identifying and analyzing common Windows privilege escalation misconfigurations in a controlled lab environment.
-
-The objective of this lab was to perform post-exploitation enumeration, identify privilege escalation opportunities, and understand how misconfigurations can lead to elevated privileges.
-
----
-
-## ?? Objectives
-
-- Understand Windows privilege escalation concepts
-- Perform system enumeration
-- Identify common privilege escalation vectors
-- Analyze Windows services and permissions
-- Practice in a safe lab environment
+</p>
 
 ---
 
-## ??? Lab Environment
+## 📌 Overview
 
-- Attacker Machine: Kali Linux
-- Target Machine: Windows 7
-- Virtualization: VMware
-- Network: Host-Only
+This project demonstrates the identification and analysis of common **Windows Privilege Escalation** misconfigurations in a controlled virtual lab.
+
+The lab focused on post-exploitation enumeration, identifying potential escalation vectors, and understanding how insecure Windows configurations can lead to elevated privileges.
 
 ---
 
-## ?? Enumeration Performed
+## 🎯 Objectives
 
-- User Enumeration
+- Understand Windows privilege escalation concepts.
+- Perform post-exploitation enumeration.
+- Identify common privilege escalation vectors.
+- Analyze services, permissions, and configurations.
+- Practice Windows security assessment in a safe lab.
+
+---
+
+## 🧪 Lab Environment
+
+| Component | Details |
+|---|---|
+| Attacker | Kali Linux |
+| Target | Windows 7 |
+| Virtualization | VMware |
+| Network | Host-Only |
+| Testing Type | Privilege Escalation |
+
+---
+
+## 🔎 Enumeration Performed
+
+- User & Privilege Enumeration
 - System Information
 - Installed Software
 - Running Services
 - Scheduled Tasks
 - Registry Inspection
 - File & Folder Permissions
-- User Privileges
 - Environment Variables
 
 ---
 
-## ?? Tools Used
+## 🛠️ Tools Used
 
 - WinPEAS
-- Command Prompt (CMD)
+- CMD
 - PowerShell
 - WMIC
 - AccessChk (Sysinternals)
 
 ---
 
-## ?? Privilege Escalation Techniques Studied
+## 💥 Privilege Escalation Techniques Studied
 
 - Unquoted Service Paths
 - Weak Service Permissions
@@ -62,28 +75,47 @@ The objective of this lab was to perform post-exploitation enumeration, identify
 - Weak File Permissions
 - Insecure Service Executables
 - Stored Credentials
-- DLL Hijacking (Concept)
+- DLL Hijacking — Concept
 
 ---
 
-## ?? Key Learning Outcomes
+## 🧠 Key Learning Outcomes
 
-- Learned how to enumerate Windows systems effectively.
-- Understood how privilege escalation opportunities are identified.
-- Improved understanding of Windows services and permissions.
-- Gained hands-on experience with Windows security misconfigurations.
-- Practiced privilege escalation techniques in a controlled lab.
-
----
-
-## ?? Disclaimer
-
-This project was completed in a personal virtual lab for educational and defensive security learning purposes only.
+- Improved Windows system enumeration skills.
+- Learned how to identify privilege escalation opportunities.
+- Strengthened understanding of Windows services and permissions.
+- Practiced analyzing common security misconfigurations.
+- Gained hands-on experience in a controlled lab environment.
 
 ---
 
-## ????? Author
+## 📂 Project Structure
 
-**Talha**
+```text
+Windows-Privilege-Escalation/
+│
+├── README.md
+├── screenshots/
+├── enumeration/
+├── evidence/
+└── report/
+```
 
-Cyber Security Student
+---
+
+## 🏁 Conclusion
+
+This lab provided practical experience in Windows post-exploitation enumeration and privilege escalation analysis.
+It demonstrated how insecure services, permissions, registry settings, scheduled tasks, and other misconfigurations can create potential paths to elevated privileges.
+
+---
+
+## ⚠️ Disclaimer
+
+This project was performed exclusively in a personal and authorized virtual laboratory environment for educational and defensive cybersecurity purposes.
+
+---
+## 👨‍💻 Author
+## Muhammad Talha
+
+Cybersecurity | SOC | Red Team | Blue Team | Detection Engineering
